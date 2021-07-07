@@ -10,46 +10,12 @@ class Boat
 {
   private:
 
-        char dir;
-        int length;
-        vector<int> boatrow;
-        vector<int> boatcol;
-        int hits;
-        string name;
-
-    public:
-
-        //Default contstructor
-        Boat(char d, int lgth, vector<int> r, vector<int> c, int hit, string nme)
-        {
-            dir=d;
-            length=lgth;
-            boatrow=r;
-            boatcol=c;
-            hits=hit;
-            name=nme;
-        }
-
-        //set boat hit
         void setHit()
         {
             hits++;
         }
 
-        int checkSunk(int BoatSize)
-        {
-            if(hits>=BoatSize)
-            {
-                return 9;
-            }
-            else
-            {
-                return 0;
-            }
-        }
 
-        //get boat grid coordinates
-        void boatCoordinates()
         {
             cout << "Coordinates for boat " << name << endl << endl;
             for(int i=0; i<length; i++)
